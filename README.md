@@ -6,7 +6,7 @@ This project is going to utilize semantic versioning for its tagging. [semver.or
 
 The general format:
 
-Given a version number **MAJOR.MINOR.PATCH**, eg. `1.0.1`
+**MAJOR.MINOR.PATCH**, eg. `1.0.1`
 
 - **MAJOR** version when you make incompatible API changes 
 - **MINOR** version when you add functionality in a backward compatible manner 
