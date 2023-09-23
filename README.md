@@ -43,3 +43,31 @@ chmod u+x ./bin/install_terraform_cli
 https://en.wikipedia.org/wiki/Chmod
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
+
+
+### Working with Env Vars
+
+We can list out all Environment Variables (env vars) using the `env` command.
+
+We can filter specific env vars using grep eg. `env | grep AWS_`
+
+In the terminal we can set using `export HELLO=`world`
+
+In ther termincal we unset using `unset HELLO`
+
+#### Printing Vars
+
+We can print an env var using echo eg. `echo $HELLO`
+
+### Scoping of Env Vars
+
+When you open up a new bash terminal in VSCode it willnot be aware of env vars that you have set in another window.
+
+If you want env vars to persist across all bash terms that you open you need to set env vars in your bash profile eg. `bash_profile`
+
+### Persisting env vars in gitpod
+
+We can persist env vars into gitpod by storig the in gitpod secrets storage.
+```
+gp env Hello= `world`
+```
