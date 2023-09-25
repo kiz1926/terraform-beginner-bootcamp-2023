@@ -71,3 +71,39 @@ We can persist env vars into gitpod by storig the in gitpod secrets storage.
 ```
 gp env Hello= `world`
 ```
+
+#Terraform BAsics
+
+### Terraform registry
+
+Terraform sources their providers and modueles from the Terraform registory which is located at [registry.terraform.io] (https://registry.terraform.io/)
+
+- **Providers** is an interface to APIs that will allow you to create resources in terraform.
+- **Modules** is a way to make large amount of terraform code modular, portable and sharable.
+
+### Terraform Console
+
+We can see a list of all the Terraofrm commands by typing `terraform`
+
+###Terraform Init
+
+At the start of a new terraform project we will run `terraform init`
+
+### Terraform Plan
+
+This will generate out a changeset about the state of our infrastructure and it tells us what will be changed. 
+
+### Terraform Apply
+
+This will run the Plan and above and spin up the infrastructure. Apply should prompt us to confirm the apply, in order to automatically approve an apply we can provide the auto approve flag eg `terraform apply --auto approve` 
+
+`.terraform.lock.hcl` contains the locked versioing for the providers or modules that should be used with this project. 
+
+The Terraform Lock File should be committed to your version control system, eg Github.
+
+### Terraform State Files 
+
+`.terraform.tf.state` contain information about the current state of your infrastructure.
+
+This file **should not be committed** to your VSC.
+

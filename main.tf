@@ -1,3 +1,23 @@
-# this is my first change
-#  This right here
-# This is my 3rd change from inside Github to push down to ide.
+terraform {
+  required_providers {
+    random = {
+      source = "hashicorp/random"
+      version = "3.5.1"
+    }
+  }
+}
+
+provider "random" {
+  # Configuration options
+}
+
+resource "random_string" "Bucket_Name" {
+  length           = 16
+  special          = false
+
+}
+
+output "random_bucket_name" {
+    value = random_string.Bucket_Name.result
+}
+
